@@ -8,7 +8,7 @@ export function socketProvider() {
 
 export const myRxStompConfig: InjectableRxStompConfig = {
   // Which server?
-  brokerURL: 'wss://fftbview.com/gs-guide-websocket/',
+  brokerURL: 'wss://15.204.116.138:9443/gs-guide-websocket/',
 
   // Wait in milliseconds before attempting auto reconnect
   // Set to 0 to disable

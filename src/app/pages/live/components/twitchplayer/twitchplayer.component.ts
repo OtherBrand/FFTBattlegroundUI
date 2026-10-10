@@ -29,7 +29,7 @@ export class TwitchPlayerComponent implements OnInit, OnChanges {
       layout: TwitchEmbedLayout.VIDEO,
       theme: TwitchEmbedTheme.DARK,
       // only needed if your site is also embedded on embed.example.com and othersite.example.com
-      parent: ['fftbview.com']
+      parent: ['15.204.116.138']
       });
       twitchEmbed
 
