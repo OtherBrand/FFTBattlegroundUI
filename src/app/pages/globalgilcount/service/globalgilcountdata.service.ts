@@ -23,6 +23,8 @@ export class GlobalGilCountDataService {
 
 export interface GlobalGilCountData {
     todaysCount: TodaysCount;
+    todaysActiveGilCount: number;
+    median: number;
     countByDay: TodaysCount[];
     countByWeek: TodaysCount[];
     countByMonth: TodaysCount[];

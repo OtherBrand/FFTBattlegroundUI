@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { BotlandLeaderboard } from '../../model/botlandleaderboard';
 import { Subject } from 'rxjs';
+import { Config } from 'datatables.net';
 
 @Component({
   selector: 'app-botlandhistoricalleaderboard',
@@ -15,7 +16,7 @@ export class BotlandHistoricalLeaderboardComponent implements OnInit {
   @Input()
   public botlandLeadeboardDataTrigger: Subject<any>;
 
-  public dtOptions: DataTables.Settings = {
+  public dtOptions: Config = {
     ordering:  false,
     order: [[ 1, 'desc' ]],
     paging: false,

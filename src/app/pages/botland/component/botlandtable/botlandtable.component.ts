@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { CleanedBotlandData } from '../../service/botlanddata.service';
 import { Subject } from 'rxjs';
+import { Config } from 'datatables.net';
 
 @Component({
   selector: 'app-botlandtable',
@@ -12,7 +13,7 @@ export class BotlandTableComponent implements OnInit, OnChanges {
   @Input() botlandData: CleanedBotlandData;
   @Input() botlandDataTrigger: Subject<any>;
 
-  public dtOptions: DataTables.Settings = {
+  public dtOptions: Config = {
     ordering:  true,
     order: [[ 1, 'desc' ]],
     paging: false,
