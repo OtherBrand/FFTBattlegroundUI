@@ -32,4 +32,13 @@ export class PlayerDataComponent implements OnInit, OnChanges {
     return color;
   }
 
+  /**
+   * The backend sends ratios as preformatted strings, and a player with no
+   * fights gets '∞' (or similar), which the percent pipe cannot parse
+   * (NG02100). Only pipe values that are actual numbers.
+   */
+  public isPercentableRatio(ratio: string): boolean {
+    return ratio != null && isFinite(Number(ratio));
+  }
+
 }
