@@ -6,3 +6,45 @@
 }
 
 .ui-helper-hidden-accessible { display:none; }
+
+/* search input fills its grid cell instead of a fixed 250px */
+.ng-autocomplete {
+  width: 100%;
+
+  ng2-completer {
+    display: block;
+    width: 100%;
+  }
+
+  ::ng-deep .completer-input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  ::ng-deep .completer-dropdown {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+/* keep label, input, and Submit on one row at any cell width */
+.input-group-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  label {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+
+  .ng-autocomplete {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  button {
+    flex: 0 0 auto;
+  }
+}
