@@ -96,10 +96,14 @@ export class SongComponent implements OnInit, OnChanges, AfterViewInit {
 
   private setHypeGuageColor(color: string) {
     let pathElements = document.getElementsByClassName("value");
-    (pathElements[0] as HTMLElement).style.stroke = color;
+    if (pathElements.length > 0) {
+      (pathElements[0] as HTMLElement).style.stroke = color;
+    }
 
     pathElements = document.getElementsByClassName('value-text');
-    (pathElements[0] as HTMLElement).style.stroke = color;
+    if (pathElements.length > 0) {
+      (pathElements[0] as HTMLElement).style.stroke = color;
+    }
   }
 
 }
